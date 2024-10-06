@@ -1,36 +1,81 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Welcome to Starlight Trial Site
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+# [Astro](https://astro.build/)の[Starlight](https://starlight.astro.build/) themeを試す
 
-## Next steps
+Obsidianで作成していたMarkdownをsiteで公開できるようにしてみた。
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+# Demo
+
+https://hkawa90.github.io/astro-starlight-trial/
+
+# Feature of [Starlight](https://starlight.astro.build/) theme
+
+- buildするだけで`pagefind`で検索できるようになります。
+- [HiDeoo/starlight-obsidian](https://github.com/HiDeoo/starlight-obsidian) plugin導入でほぼ`obsidian`と同様な表示となる。
+
+# Requirement
+
+- Obsidianの`vaults`
+- favicon.svg
+  faviconファイルを`SVG`で用意しておきます。
+
+ローカルで`preview`したい人は、
+
+- node.js
+- npm/pnpmなどのpackage manager
+
+# Configuration
+
+設定自体は`astro.config.mjs`の変更だけで済みます。
+
+```js
+// @ts-check
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+import starlightObsidian, { obsidianSidebarGroup } from 'starlight-obsidian';
+
+// https://astro.build/config
+export default defineConfig({
+	site: 'https://hkawa90.github.io',
+	base: 'astro-starlight-trial',
+	integrations: [
+		starlight({
+			plugins: [
+				// Generate the Obsidian vault pages.
+				starlightObsidian({
+					vault: './MyDoc/',
+				}),
+                        ],
+			title: 'My Docs',
+                        // pagefindで日本語で検索できるようにするためlocaleを設定する
+			locales: {
+                                 root: {
+					label: 'Japanese',
+					lang: 'ja',
+				},
+			},
+			social: {
+				github: 'https://github.com/hkawa90/astro-starlight-trial',
+			},
+			sidebar: [
+				{
+					label: 'Guides',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: 'Example Guide', slug: 'guides/example' },
+					],
+				},
+				{
+					label: 'Reference',
+					autogenerate: { directory: 'reference' },
+				},
+				// Add the generated sidebar group to the sidebar.
+				obsidianSidebarGroup,
+			],
+		}),
+	],
+});
+
+```
