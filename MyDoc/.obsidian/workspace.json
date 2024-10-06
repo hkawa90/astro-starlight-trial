@@ -1,0 +1,162 @@
+{
+  "main": {
+    "id": "b796704e22937db9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1de35266206d7c86",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bbc4adef02d32f6e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian/frontmatter 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f4bc70c7031840c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "ba7fd00674cadcfd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0158c3c266273036",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f71785d6898c3060",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5a7eb52226889bfd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "44c475ad32db0467",
+    "type": "split",
+    "children": [
+      {
+        "id": "bad31112658514ee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3248bce301f06030",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Obsidian/frontmatter 2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a2f24165dbb7fdde",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Obsidian/frontmatter 2.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c714b0c51cd7058e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "207bd8d4a7ccf218",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Obsidian/frontmatter 2.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:クイックスイッチャーを開く": false,
+      "graph:グラフビューを開く": false,
+      "canvas:新規キャンバスを作成": false,
+      "daily-notes:今日のデイリーノートを開く": false,
+      "templates:テンプレートを挿入": false,
+      "command-palette:コマンドパレットを開く": false
+    }
+  },
+  "active": "bbc4adef02d32f6e",
+  "lastOpenFiles": [
+    "markdown/拡張.md",
+    "markdown/Basic.md",
+    "Obsidian/Markdown syntax.md",
+    "Obsidian/Frontmatter.md",
+    "Obsidian/frontmatter 2.md",
+    "Obsidian",
+    "拡張Markdown",
+    "Pasted image 20241001222929.png",
+    "Welcome.md",
+    "markdown"
+  ]
+}

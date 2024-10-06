@@ -5,14 +5,14 @@ import starlightObsidian, { obsidianSidebarGroup } from 'starlight-obsidian';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://hkawa90.github.io/astro-starlight-trial',
-	outDir: './docs', // for github pages
+	site: 'https://hkawa90.github.io',
+	base: 'astro-starlight-trial',
 	integrations: [
 		starlight({
 			plugins: [
 				// Generate the Obsidian vault pages.
 				starlightObsidian({
-					vault: '/mnt/c/Users/hideo/Documents/Obsidian/MyDoc/',
+					vault: './MyDoc/',
 				}),
                         ],
 			title: 'My Docs',
@@ -24,7 +24,7 @@ export default defineConfig({
 				},
 			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/hkawa90/astro-starlight-trial',
 			},
 			sidebar: [
 				{
